@@ -1,2 +1,6 @@
-<h1>Clothings#new</h1>
-<p>Find me in app/views/clothings/new.html.erb</p>
+<%= simple_form_for @clothing do |f| %>
+  <%= f.input :kind %>
+  <%= f.input :brand %>
+  <%= f.input :size %>
+  <%= f.submit 'Add your piece', class: 'btn btn-flat' %>
+<% end %>

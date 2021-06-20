@@ -15,10 +15,8 @@ class ClothingsController < ApplicationController
     @clothing = Clothing.new(clothing_params)
     @clothing.user = current_user
     if @clothing.save
-      flash[:success] = "Clothing successfully created"
       redirect_to @clothing
     else
-      flash[:error] = "Something went wrong"
       render :new
     end
   end
@@ -42,7 +40,7 @@ class ClothingsController < ApplicationController
   private
 
   def clothing_params
-    params.require(:clothing).permit(:type, :brand, :size)
+    params.require(:clothing).permit(:kind, :brand, :size)
   end
 
   def set_clothing
