@@ -3,5 +3,6 @@
   <%= f.input :kind %>
   <%= f.input :brand %>
   <%= f.input :size %>
+  <%= f.input :photo, as: :file, inline_label: 'photo', label: false %>
   <%= f.submit 'Add your piece', class: 'btn btn-flat' %>
 <% end %>
