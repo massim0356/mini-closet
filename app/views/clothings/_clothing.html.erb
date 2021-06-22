@@ -1,3 +1,5 @@
-<%= cl_image_tag(clothing.photo.key) %>
-<%= clothing.name %>
-<%= clothing.kind %>
+<%= link_to clothing_path(clothing), class: "link" do  %>
+  <%= cl_image_tag(clothing.photo.key) %>
+  <%= clothing.name %>
+  <%= clothing.kind %>
+<% end %>
