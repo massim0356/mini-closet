@@ -1,7 +1,10 @@
 <h1>Clothings#show</h1>
-<%= @clothing.name %>
-<%= @clothing.brand %>
-<%= @clothing.kind %>
-<%= @clothing.size %>
-<%= link_to "Edit", edit_clothing_path(@clothing)  %>
-<%= link_to "Delete", clothing_path(@clothing), method: :delete  %>
+<% if @clothing.user == current_user %>
+  <%= @clothing.name %>
+  <%= @clothing.brand %>
+  <%= @clothing.kind %>
+  <%= @clothing.size %>
+  <%= link_to "Edit", edit_clothing_path(@clothing)  %>
+  <%= link_to "Delete", clothing_path(@clothing), method: :delete  %>
+<% end %>
+
